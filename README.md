@@ -1,1 +1,1 @@
-Ember App: Demo built using Ember App Kit
+*Ember App: Demo built using Ember App Kit
