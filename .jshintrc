@@ -9,7 +9,9 @@
     "DS": true,
     "$": true,
     "alert": true,
-    "console": true
+    "console": true,
+    "localStorage": true,
+    "App": true
   },
   "node" : false,
   "browser" : false,

@@ -5,7 +5,14 @@
 
         <ul>
             {{#each model}}
-                <li>{{title}} - asked by: {{author}}</li>
+                <li>
+                    {{#link-to 'question' this}}
+                        {{title}}
+                    {{/link-to}}
+
+                    (asked by {{author.fullName}}
+                </li>
+
             {{/each}}
         </ul>
     </div>

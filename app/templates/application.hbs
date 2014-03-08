@@ -12,6 +12,22 @@
             {{/link-to}}
         </li>
     </ul>
+
+    <ul class="nav navbar-nav">
+        {{#if userSignedIn}}
+            <li>
+                <a href="#" {{action 'signOut'}}>
+                    Welcome, {{signedInUser.fullName}} - Sign out
+                </a>
+            </li>
+
+        {{else}}
+
+            <li>
+                {{#link-to 'sign-in'}}Sign in{{/link-to}}
+            </li>
+        {{/if}}
+    </ul>
 </nav>
 
 {{outlet}}

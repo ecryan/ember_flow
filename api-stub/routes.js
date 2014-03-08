@@ -1,31 +1,36 @@
-module.exports = function(server) {
+module.exports = function (server) {
 
-  // Create an API namespace, so that the root does not 
-  // have to be repeated for each end point.
-	server.namespace('/api', function() {
+    // Create an API namespace, so that the root does not
+    // have to be repeated for each end point.
+    server.namespace('/api', function () {
 
-		// Return fixture data for '/api/posts/:id'
-		server.get('/posts/:id', function(req, res) {
-			var post = {
-					  "post": {
-					    "id": 1,
-					    "title": "Rails is omakase",
-					    "comments": ["1", "2"],
-					    "user" : "dhh"
-					  },
+            // Return fixture data for '/api/'
+            server.get('/question/:id', function (req, res) {
+//                var question = {
+//                    "question": [
+//                        {
+//                            id: 101,
+//                            title: 'How do i feed hamsters FROM STUB API?',
+//                            author: 'Tom Dale',
+//                            date: '2013-01-01T12:00:00',
+//                            question: 'Tomster cant eat using a knife and a fork. How do we feed him?'
+//                        },
+//                        {
+//                            id: 102,
+//                            title: 'Are humans insane?',
+//                            author: 'Tomster the Hamster',
+//                            date: '2013-02-02T12:00:00',
+//                            question: 'I mean are they totally nuts?'
+//                        }
+//                    ]
+//                };
 
-					  "comments": [{
-					    "id": "1",
-					    "body": "Rails is unagi"
-					  }, {
-					    "id": "2",
-					    "body": "Omakase O_o"
-					  }]
-					};
+                res.send(question);
+            });
 
-			res.send(post);
-		});
+        }
+    )
+    ;
 
-	});
-
-};
+}
+;

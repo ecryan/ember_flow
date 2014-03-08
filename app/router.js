@@ -7,6 +7,13 @@ Router.map(function() {
   //   this.route('new');
   // });
   this.route('about');
+  this.resource('question', { path: '/question/:id'});
+//  this.resource('users', function() {
+//      this.resource('sign-in');
+//  });
+
+  this.resource('sign-in');
+
 });
 
 export default Router;
