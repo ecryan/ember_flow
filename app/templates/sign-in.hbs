@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-8">
-        {{#if controller.application.userSignedIn}}
+        {{#if controllers.application.userSignedIn}}
             <p>You are already signed-in!</p>
         {{else}}
             <form {{action 'signIn' on="submit"}}>
