@@ -30,6 +30,12 @@ User.FIXTURES = [
         lastName: 'Hamster',
         email: 'tomster@hamster.com',
         questions: [102]
+    },
+    {
+        id: 203,
+        firstName: 'Random',
+        lastName: 'Guy',
+        email: 'random@gmail.com'
     }
 
 ];

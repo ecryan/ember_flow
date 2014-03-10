@@ -5,7 +5,8 @@ var Question = DS.Model.extend({
     title: DS.attr('string'),
     date: DS.attr('date'),
     question: DS.attr('string'),
-    author: DS.belongsTo('user')
+    author: DS.belongsTo('user'),
+    answers: DS.hasMany('answer', {async: true})
 });
 
 Question.FIXTURES = [
@@ -14,7 +15,8 @@ Question.FIXTURES = [
         title: 'How do i feed hamsters YEAAAAAA?',
         author: 201,
         date: '2013-01-01T12:00:00',
-        question: 'Tomster cant eat using a knife and a fork. How do we feed him?'
+        question: 'Tomster cant eat using a knife and a fork. How do we feed him?',
+        answers: [301]
     },
     {
         id: 102,
