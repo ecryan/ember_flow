@@ -1,5 +1,8 @@
-var AskQuestionController = Ember.ArrayController.extend({
-    needs: ['application'],
+import SetAuthorMixin from 'appkit/mixins/set-author-mixin';
+
+
+var AskQuestionController = Ember.ArrayController.extend(SetAuthorMixin, {
+
     sortProperties: ['date'],
     sortAscending: true,
 
@@ -16,9 +19,7 @@ var AskQuestionController = Ember.ArrayController.extend({
                 date: new Date()
             });
 
-            this.get('controllers.application.signedInUser').then(function(user) {
-                question.set('author', user);
-            });
+           this.setAuthorFor(question);
 
             var controller = this;
 

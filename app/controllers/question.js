@@ -1,5 +1,6 @@
-var QuestionController = Ember.ObjectController.extend({
-    needs: ['application'],
+import SetAuthorMixin from 'appkit/mixins/set-author-mixin';
+
+var QuestionController = Ember.ObjectController.extend( SetAuthorMixin, {
 
     actions: {
         answerQuestion: function() {
@@ -9,9 +10,7 @@ var QuestionController = Ember.ObjectController.extend({
                 date: new Date()
             });
 
-            this.get('controllers.application.signedInUser').then(function(user) {
-                answer.set('user', user);
-            });
+            this.setAuthorFor(answer);
 
             var controller = this;
 
