@@ -16,7 +16,7 @@ Question.FIXTURES = [
         author: 201,
         date: '2013-01-01T12:00:00',
         question: 'Tomster cant eat using a knife and a fork. How do we feed him?',
-        answers: [301]
+        answers: [301, 302]
     },
     {
         id: 102,
